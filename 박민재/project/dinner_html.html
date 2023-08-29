@@ -8,31 +8,38 @@
     <style>
         .grid-menu {
         display:grid;
-        border-color:black;
-        grid-template-columns:repeat(2, 1fr) ;
-        grid-template-row:repeat(2,50%) ;
-        gap: 1vw;
-        justify-items:center;
-        align-items:center;
-        hegiht:100vh;
+        border: 2px solid #000000;
+        grid-template-columns:repeat(2, 1fr);
+        grid-template-row:repeat(3, 1fr);
+        grid-gap: 20px;
+		justify-items: center;
+		align-items: center;
+		height: 100vh;
         }
         body {
+        border: 2px solid #000000;
         background-color:#81F79F;
         margin:5vw;
+        padding:10vw;
+        position:absolute;
         }
         .top {
+        border: 2px solid #000000;
         background-color:#FF80000;
-        font-size:5vw;
+        font-size:6vw;
         font-weight:bold;
         text-align:center;
-        margin:5vw auto;
+        margin:20px auto;
         width:80vw;
         height:7.5vw;
         }
         .box {
         background-color:#f2f2f2;
+        display: flex;
+		justify-content: center;
+		align-items: center;
         font-color:black;
-        font-size:2vw;
+        font-size:3vw;
         font-style:italic;
         margin:1vw;
         text-align:center;
