@@ -47,7 +47,7 @@ while True:  # 무한 반복(현업에선 거의 안 씀. 메모리 뻑나서)
             if food == 0:  # 처음 안내판 출력
                 print(intro_menu)
             elif food in menu_dict_1:  # 출력한 메뉴판에서 원하는 음식에 해당하는 번호 입력 시 해당 레시피 출력
-                print(menu_dict_1[food])
+                menu_dict_1[food]()
                 print(return_menu)
             else:  # 메뉴판 이외의 숫자 입력 시 문장 출력 후 26번줄로 돌아감
                 print(failed_menu + "\n" + return_menu)
@@ -57,7 +57,7 @@ while True:  # 무한 반복(현업에선 거의 안 씀. 메모리 뻑나서)
             if food == 0:  # 처음 안내판 출력
                 print(intro_menu)
             elif food in menu_dict_2:  # 출력한 메뉴판에서 우너하는 음식에 해당하는 번호 입력 시 해당 레시피 출력
-                print(menu_dict_2[food])
+                menu_dict_2[food]()
                 print(return_menu)
             else:  # 메뉴판 이외의 숫자 입력 시 문장 출력 후 26번줄로 돌아감
                 print(failed_menu + "\n" + return_menu)
@@ -67,7 +67,7 @@ while True:  # 무한 반복(현업에선 거의 안 씀. 메모리 뻑나서)
             if food == 0:  # 0 입력시 intro_menu 호출 후 26번줄로 돌아감
                 print(intro_menu)
             elif food in menu_dict:  # 1 입력 후 숫자에 해당하는 레시피 출력 후 26번줄로 돌아감
-                print(menu_dict[food])
+                menu_dict[food]()
                 print(return_menu)
             else:  # 메뉴판 이외의 숫자 입력 시 문장 출력 후 26번줄로 돌아감
                 print(failed_menu + "\n" + return_menu)
@@ -84,10 +84,10 @@ while True:  # 무한 반복(현업에선 거의 안 씀. 메모리 뻑나서)
                     break
                 selected_list = random.choice([list_a, list_b])
                 selected_number = random.choice(selected_list)
-                if selected_list is list_a and len(result_a) < 7 and 4000 <= total_sum + selected_number <= 5000:
+                if selected_list is list_a and len(result_a) < 7 and total_sum + selected_number <= 5000:
                     result_a.append(selected_number)
                     total_sum += selected_number
-                elif selected_list is list_b and len(result_b) < 7 and 4000 <= total_sum + selected_number <= 5000:
+                elif selected_list is list_b and len(result_b) < 7 and total_sum + selected_number <= 5000:
                     result_b.append(selected_number)
                     total_sum += selected_number
             print("랜덤하게 선택된 반찬의 칼로리:", result_a)
@@ -107,6 +107,11 @@ while True:  # 무한 반복(현업에선 거의 안 씀. 메모리 뻑나서)
         print(error_message + "\n" + return_menu)
 
 # if/elif 구조를 try로 바꾸기
-# class 선언으로 간소하하기 def 메뉴, 밥, 국
+# class 선언으로 간소하하기 def 밥, 국
 # 콜백과 1급함수 공부해서 메모리 주소 나오는거 고치기
 # 디버깅툴로 코드 흐름 따라가기
+# #enum 클래스란?
+#테일윈드 css 프레임 워크로 html 디자인하기
+#진자 공부하기
+#sql db 공부하기
+#querry parameter?
