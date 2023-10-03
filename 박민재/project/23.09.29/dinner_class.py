@@ -6,24 +6,6 @@ from side_dish import *
 
 class DinnerLotto:
     def __init__(self):
-        self.menu_dict_1 = {
-            1: print_gal,
-            3: print_gogalby,
-            5: print_cucumber_muchim,
-            7: print_pork_neck,
-            9: print_lettuce_kimchi,
-            11: print_braised_tofu,
-            13: print_braised_radish_with_mackerel
-        }
-
-        self.menu_dict_2 = {
-            2: print_JJagle,
-            4: print_Perilla_Kimchi,
-            6: print_Seaweed_Soup,
-            8: print_Beef_Bone_Soup,
-            10: print_Soybean_Sprout_Soup
-        }
-
         self.menu_dict = {**self.menu_dict_1, **self.menu_dict_2}
         self.intro_menu = """
 반찬 고르기 : 3

@@ -102,54 +102,13 @@
             <a class="rm-underline" href="">Ⅰ </a><오늘의 메뉴 :><a class="rm-underline" href=""> Ⅱ</a>
         </h4>
     </div>
-<div class="menu">
-    <div class="menu-title">
-        <div>
-            반찬
-        </div>
-    </div>
-    <div style="margin:auto" class="menu-content">
-        <div>
-            <p class="rm-underline">
-                    갈배제육
-            </p>
-        </div>
-        <div>
-            <p class="rm-underline">
-                고갈비
-            </p>
-        </div>
-        <div>
-            <p class="rm-underline">
-                오이소박이
-            </p>
-        </div>
-        <div>
-            <p class="rm-underline">
-                돼지목살간장구이
-            </p>
-        </div>
-        <div>
-            <p class="rm-underline">
-                    상추 겉절이
-            </p>
-        </div>
-        <div>
-            <p class="rm-underline">
-                반찬
-            </p>
-        </div>
-        <div>
-            <a class="rm-underline" href="">
-                ?
-            </a>
-        </div>
-    </div>
-</div>
-    <div>
-        <p class="off">
-            <a class="rm-underline" href="alt+F4"><b>종료하기</b></a>
-        </p>
+<h1>반찬 리스트</h1>
+    <div class="menu-content">
+        {% for food in food_list %}
+            <div>
+                <p class="rm-underline">{{ food.name }}</p>
+            </div>
+        {% endfor %}
     </div>
 </body>
 </html>

@@ -85,32 +85,18 @@
     </h4>
 </div>
 <div style="margin:auto" class="menu">
-    <div>
-        <p>
-            <a href=/C%3A%2FE%20drive/%EA%B0%95%EB%82%A8%EA%B5%AC%20AWS%20%EA%B5%90%EC%9C%A1/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EB%86%80%EC%9D%B4_%EB%B3%B8/%EB%B0%95%EB%AF%BC%EC%9E%AC/project/templates/dinner_main_diet.html class="rm-underline">
-                반찬 리스트 가기
-            </a>
-        </p>
-    </div>
-    <div>
-        <p>
-            <a href="./templates/dinner_main_soup.html" class="rm-underline">
-                국 리스트 가기
-            </a>
-        </p>
-    </div>
-    <div>
-        <p>
-            <a href="dinner_main_diet.html" class="rm-underline">
-                식단짜기
-            </a>
-        </p>
-    </div>
-    <div>
-        <p class="rm-underline">
-            미정
-        </p>
-    </div>
+    <form action="/select_side" method="post">
+    <button type="submit">반찬 리스트 가기</button>
+    </form>
+    <form action="/select_menu" method="post">
+    <button type="submit">국 리스트 가기</button>
+    </form>
+    <form action="/select_menu" method="post">
+    <button type="submit">식단 짜기</button>
+    </form>
+    <form action="/select_menu" method="post">
+    <button type="submit">건의하기</button>
+    </form>
 </div>
 <div>
     <p class="off">
