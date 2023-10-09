@@ -1,6 +1,17 @@
 import random
 
 
+def random_menu_two():
+    random_number_1 = random.randint(1, 9)
+    random_number_2 = random.randint(1, 9)
+    print(f"( {random_number_1} / {random_number_2} )")
+
+
+def random_menu_one():
+    random_number_1 = random.randint(1, 9)
+    return random_number_1
+
+
 class DinnerLotto:
     def __init__(self):
         self.intro_menu = """
@@ -22,15 +33,6 @@ class DinnerLotto:
 
     def print_error_message(self):
         return self.error_message + "\n" + self.return_menu
-
-    def random_menu_one(self):
-        random_number_1 = random.randint(1, 9)
-        print(f"{random_number_1}")
-
-    def random_menu_two(self):
-        random_number_1 = random.randint(1, 9)
-        random_number_2 = random.randint(1, 9)
-        print(f"( {random_number_1} / {random_number_2} )")
 
     def select_side(self):
         try:
@@ -95,8 +97,8 @@ class DinnerLotto:
 if __name__ == "__main__":
     menu_selector = DinnerLotto()
     menu_selector.print_intro_menu()
-    menu_selector.random_menu_one()
-    menu_selector.random_menu_two()
+    random_menu_one()
+    random_menu_two()
     menu_selector.select_side()
     menu_selector.select_menu()
     menu_selector.create_diet()

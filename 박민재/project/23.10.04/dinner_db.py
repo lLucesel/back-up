@@ -1,32 +1,41 @@
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, Column, Integer, String, Text
+from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker, scoped_session
+
+Base = declarative_base()
+
+
+class FoodType(Base):
+    __tablename__ = 'food_type'
+    id = Column(Integer, primary_key=True, index=True)
+    food_type = Column(String(10), unique=True, index=True)
+
+
+class Food(Base):
+    __tablename__ = 'food'
+    id = Column(Integer, primary_key=True, index=True)
+    food_type_id = Column(Integer, index=True)
+    name = Column(String(20), unique=True, index=True)
+    ingredient = Column(Text)
+    spice = Column(Text)
+    recipe = Column(Text)
+    calorie = Column(Integer)
+    carbohydrate = Column(Integer)
+    protein = Column(Integer)
+    vitamin = Column(Integer)
+
 
 user_name = "admin_mj"
 user_pwd = "77gundam77"
 db_host = "127.0.0.1"
 db_name = "dinner_db"
 
-DATABASE = 'mysql://%s:%s@%s/%s?charset=utf8' % (
-    user_name,
-    user_pwd,
-    db_host,
-    db_name,
-)
+DATABASE_URL = f"mysql://{user_name}:{user_pwd}@{db_host}/{db_name}?charset=utf8"
 
-ENGINE = create_engine(
-    DATABASE,
-    encoding="utf-8",
+engine = create_engine(
+    DATABASE_URL,
+    charset="utf-8",
     echo=True
 )
 
-session = scoped_session(
-    sessionmaker(
-        autocommit=False,
-        autoflush=False,
-        bind=ENGINE
-    )
-)
-
-Base = declarative_base()
-Base.query = session.query_property()
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
