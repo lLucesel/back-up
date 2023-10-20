@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}side{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+<p></p>
+<div class="container">
+    <div class="row">
+        {% for item in name_side %}
+            <div class="col-sm-2">
+                <div class="card">
+                    <div class="card-body">
+                        <div style="font-size:3vh; text-align: center;">
+                            <a class="rm-underline" href="/side/{{ item.name }}">
+                                {{ item.name }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block content %}
+&nbsp;
+<div class="container">
+    <div class="card">
+	    <!--상단 타이틀-->
+        <div style="font-size:4vh;" class="card-header">
+            새로운 음식
+        </div>
+        <div class="card-body">
+            <form method="POST">
+                <div class="form-group">
+                    <label>food_type_id</label>
+                    <input type="text" class="form-control" name="title"
+                           required>
+                </div>
+                &nbsp;
+                <div class="form-group">
+                    <label>이름</label>
+                    <input type="text" class="form-control" name="title"
+                           required>
+                </div>
+                &nbsp;
+                <div class="form-group">
+                    <label>주재료</label>
+                    <textarea class="form-control" rows="3" name="description"
+                              required></textarea>
+                </div>
+                &nbsp;
+                <div class="form-group">
+                    <label>양념</label>
+                    <textarea class="form-control" rows="3" name="description"
+                              required></textarea>
+                </div>
+                &nbsp;
+                <div class="form-group">
+                    <label>조리법</label>
+                    <textarea class="form-control" rows="5" name="description"
+                              required></textarea>
+                </div>
+                &nbsp;
+                <div class="row">
+                    <div class="col-md-2">
+                            <div class="form-group">
+                                <label>칼로리 (cal)</label>
+                                <input type="text" class="form-control" name="description"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label>탄수화물 (g)</label>
+                            <input type="text" class="form-control" name="description"
+                                      required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label>단백질 (g)</label>
+                            <input type="text" class="form-control" name="description"
+                                      required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label>비타민 (g)</label>
+                            <input type="text" class="form-control" name="description"
+                                      required>
+                        </div>
+                    </div>
+                </div>
+	            &nbsp;
+            </form>
+            <form>
+                <button type="submit" class="btn btn-primary">저장하기</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

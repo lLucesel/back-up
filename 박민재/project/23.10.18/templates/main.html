@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+<title>Dinner Lotto</title>
+{% block head %}
+    {{ super() }}
+{% endblock %}
+<script language = 'javascript'>
+    function RandomFood(){
+    side_name;
+    soup_name;
+    }
+</script>
+{% block content %}
+<div class="container-fluid mt-3">
+    <h2>오늘의 메뉴</h2>
+    <span>반찬: {{ side_name }}</span><span>              </span><span>국: {{ soup_name }}</span>
+<form>
+    <span>
+        <button name="data" onclick="getData()">뽑기</button>
+    </span>
+</form>
+    <!-- 그림 하나 넣기 -->
+</div>
+{% endblock %}

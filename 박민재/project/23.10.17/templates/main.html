@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}저녁 복불복{% endblock %}
+{% block head %}
+    {{ super() }}
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            function RandomFood()
+            {
+            $.get("/random_foods", function(data){
+            $('#random_side').text(data.side);
+            $('#random_soup').text(data.soup);
+            });
+            }
+        </script>
+{% endblock %}
+{% block content %}
+<div class="container-fluid mt-3">
+    <h3>저녁메뉴 랜덤뽑기</h3>
+    <h4>오늘의 메뉴</h4>
+    <p>반찬: <span id="random_food">랜덤한 음식 이름</span></p>
+    <button onclick="getRandomFood()">랜덤 음식 선택</button>
+    <p>dinner_db.sql에서 food table의 food_type_id = 2인 항목들만 뽑고 그 중 하나 고르기
+        국: {{ ran_soup_name }}</p>
+</div>
+{% endblock %}

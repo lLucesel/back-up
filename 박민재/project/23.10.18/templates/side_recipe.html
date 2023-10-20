@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}recipe{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+<div>{{ side_name }}</div>
+<div>{{ side_ingredient }}</div>
+<div>{{ side_spice }}</div>
+<div>{{ side_recipe }}</div>
+<div>{{ side_calorie }}</div>
+<div>{{ side_carbohydrate }}</div>
+<div>{{ side_protein }}</div>
+<div>{{ side_vitamin }}</div>
+{% endblock %}
