@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+{% block head %}
+<Title>diet</Title>
+    {{ super() }}
+{% endblock %}
+{% block content %}
+<div class="container">
+        <h1>일주일 칼로리</h1>
+    <p>&nbsp;</p>
+( 30대 남자 기준 일주일 칼로리 : 17,500cal   /   30대 여자 기준 일주일 칼로리 : 14,000cal )
+        <table class="table table-bordered">
+            <thead>
+                <tr class="text-center">
+                    <th class="col-1">남자</th>
+                    <th>일요일</th>
+                    <th>월요일</th>
+                    <th>화요일</th>
+                    <th>수요일</th>
+                    <th>목요일</th>
+                    <th>금요일</th>
+                    <th>토요일</th>
+                    <th>합계</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr>
+                    <th class="col-1">반찬</th>
+                    <th>%a</th>
+                    <th>%b</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>none</th>
+                </tr>
+                <tr>
+                    <th class="col-1">국</th>
+                    <th>%a</th>
+                    <th>%b</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>none</th>
+                </tr>
+                <tr>
+                    <th class="col-1">칼로리</th>
+                    <th>nmw</th>
+                    <th>nmw</th>
+                    <th>nmw</th>
+                    <th>nmw</th>
+                    <th>nmw</th>
+                    <th>nmw</th>
+                    <th>nmw</th>
+                    <th>nmw</th>
+                </tr>
+                <tr>
+                    <th class="col-1">탄수화물</th>
+                    <th>%a</th>
+                    <th>%b</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%sum</th>
+                </tr>
+                <tr>
+                    <th class="col-1">단백질</th>
+                    <th>%a</th>
+                    <th>%b</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%sum</th>
+                </tr>
+                <tr>
+                    <th class="col-1">비타민</th>
+                    <th>%a</th>
+                    <th>%b</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%sum</th>
+                </tr>
+            </tbody>
+        </table>
+    <table class="table table-bordered">
+            <thead>
+                <tr class="text-center">
+                    <th class="col-1"><b>여자</b></th>
+                    <th>일요일</th>
+                    <th>월요일</th>
+                    <th>화요일</th>
+                    <th>수요일</th>
+                    <th>목요일</th>
+                    <th>금요일</th>
+                    <th>토요일</th>
+                    <th>합계</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr>
+                    <th class="col-1">반찬</th>
+                    <th>%a</th>
+                    <th>%b</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>none</th>
+                </tr>
+                <tr>
+                    <th class="col-1">국</th>
+                    <th>%a</th>
+                    <th>%b</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>none</th>
+                </tr>
+                <tr>
+                    <th class="col-1">칼로리</th>
+                    <th>nmw</th>
+                    <th>nmw</th>
+                    <th>nmw</th>
+                    <th>nmw</th>
+                    <th>nmw</th>
+                    <th>nmw</th>
+                    <th>nmw</th>
+                    <th>nmw</th>
+                </tr>
+                <tr>
+                    <th class="col-1">탄수화물</th>
+                    <th>%a</th>
+                    <th>%b</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%sum</th>
+                </tr>
+                <tr>
+                    <th class="col-1">단백질</th>
+                    <th>%a</th>
+                    <th>%b</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%sum</th>
+                </tr>
+                <tr>
+                    <th class="col-1">비타민</th>
+                    <th>%a</th>
+                    <th>%b</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%c</th>
+                    <th>%sum</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

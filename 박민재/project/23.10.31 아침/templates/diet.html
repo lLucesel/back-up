@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block head %}
+<Title>diet</Title>
+    {{ super() }}
+{% endblock %}
+{% block content %}
+<div class="container">
+        <h1>일주일 칼로리</h1>
+    <p>&nbsp;</p>
+30대 남자 기준 일주일 칼로리 : 17,500cal   /   30대 여자 기준 일주일 칼로리 : 14,000cal
+        <table class="table table-bordered">
+            <thead>
+                <tr class="text-center">
+                    <th class="col-1"></th>
+                    <th>일요일</th>
+                    <th>월요일</th>
+                    <th>화요일</th>
+                    <th>수요일</th>
+                    <th>목요일</th>
+                    <th>금요일</th>
+                    <th>토요일</th>
+                    <th>합계</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr>
+                    <th class="col-1">반찬</th>
+                    <th>_side[0] cal</th>
+                    <th>_side[1] cal</th>
+                    <th>_side[2] cal</th>
+                    <th>_side[3] cal</th>
+                    <th>_side[4] cal</th>
+                    <th>_side[5] cal</th>
+                    <th>_side[6] cal</th>
+                    <th>sum[_side] cal</th>
+                </tr>
+                <tr>
+                    <th class="col-1">국</th>
+                    <th>_soup[0] cal</th>
+                    <th>_soup[1] cal</th>
+                    <th>_soup[2] cal</th>
+                    <th>_soup[3] cal</th>
+                    <th>_soup[4] cal</th>
+                    <th>_soup[5] cal</th>
+                    <th>_soup[6] cal</th>
+                    <th>sum[_soup] cal</th>
+                </tr>
+                <tr>
+                    <th class="col-1">칼로리</th>
+                    <th>_cal[0]cal</th>
+                    <th>_cal[1]cal</th>
+                    <th>_cal[2]cal</th>
+                    <th>_cal[3]cal</th>
+                    <th>_cal[4]cal</th>
+                    <th>_cal[5]cal</th>
+                    <th>_cal[6]cal</th>
+                    <th>sum(_cal)cal</th>
+                </tr>
+                <tr>
+                    <th class="col-1">탄수화물</th>
+                    <th>_carbohydrate[0] g</th>
+                    <th>_carbohydrate[1] g</th>
+                    <th>_carbohydrate[2] g</th>
+                    <th>_carbohydrate[3] g</th>
+                    <th>_carbohydrate[4] g</th>
+                    <th>_carbohydrate[5] g</th>
+                    <th>_carbohydrate[6] g</th>
+                    <th>sum(_carbohydrate) g</th>
+                </tr>
+                <tr>
+                    <th class="col-1">단백질</th>
+                    <th>_protein[0] g</th>
+                    <th>_protein[1] g</th>
+                    <th>_protein[2] g</th>
+                    <th>_protein[3] g</th>
+                    <th>_protein[4] g</th>
+                    <th>_protein[5] g</th>
+                    <th>_protein[6] g</th>
+                    <th>sum(_protein) g</th>
+                </tr>
+                <tr>
+                    <th class="col-1">비타민</th>
+                    <th>_vitamin[0] g</th>
+                    <th>_vitamin[1] g</th>
+                    <th>_vitamin[2] g</th>
+                    <th>_vitamin[3] g</th>
+                    <th>_vitamin[4] g</th>
+                    <th>_vitamin[5] g</th>
+                    <th>_vitamin[6] g</th>
+                    <th>sum(_vitamin) g</th>
+                </tr>
+            </tbody>
+        </table>
+</div>
+{% endblock %}

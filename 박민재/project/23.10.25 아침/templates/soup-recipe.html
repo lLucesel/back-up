@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block head %}
+<title>recipe</title>
+  {{ super() }}
+{% endblock %}
+{% block content %}
+&nbsp;
+<div class="container">
+  <div class="row">
+    <div class="col-md">
+      <div class="card">
+        <div class="card-header">
+          <label>
+          {{ soup_name }}
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<p></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md">
+      <div class="card">
+        <div class="card-body">
+          <p>주재료</p>
+          {{ soup_ingredient }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<p></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md">
+      <div class="card">
+        <div class="card-body">
+          <p>양념</p>
+          {{ soup_spice }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<p></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md">
+      <div class="card">
+        <div class="card-body">
+          <p>조리법</p>
+          {{ soup_recipe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<p></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+          <p>칼로리</p>
+          {{ soup_calorie }}
+        </div>
+      </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-body">
+            <p>탄수화물:</p>
+            {{ soup_carbohydrate }}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-body">
+            <p>단백질</p>
+            {{ soup_protein }}
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-body">
+            <p>비타민</p>
+            {{ soup_vitamin }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

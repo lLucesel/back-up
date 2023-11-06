@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block head %}
+<title>side-recipe</title>
+  {{ super() }}
+{% endblock %}
+{% block content %}
+&nbsp;
+<div class="container">
+  <div class="row">
+    <div class="col-md">
+      <div class="card">
+        <div class="card-header">
+          <label>
+            {{ side_name }}
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+&nbsp;
+<div class="container">
+  <div class="row">
+    <div class="col-md">
+      <div class="card">
+        <div class="card-body">
+          <p>주재료</p>
+          {{ side_ingredient }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+&nbsp;
+<div class="container">
+  <div class="row">
+    <div class="col-md">
+      <div class="card">
+        <div class="card-body">
+          <p>양념</p>
+          {{ side_spice }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+&nbsp;
+<div class="container">
+  <div class="row">
+    <div class="col-md">
+      <div class="card">
+        <div class="card-body">
+          <p>조리법</p>
+          {{ side_recipe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+&nbsp;
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+          <p>칼로리:</p>
+          {{ side_calorie }}cal
+        </div>
+      </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-body">
+            <p>탄수화물:</p>
+            {{ side_carbohydrate }}g
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-body">
+            <p>단백질:</p>
+            {{ side_protein }}g
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-body">
+            <p>비타민:</p>
+            {{ side_vitamin }}g
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
